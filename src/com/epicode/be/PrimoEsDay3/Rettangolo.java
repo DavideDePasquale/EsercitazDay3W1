@@ -1,45 +1,37 @@
 package com.epicode.be.PrimoEsDay3;
 
 public class Rettangolo {
-    protected int altezza;
-    protected int larghezza;
-    int perimetro = (altezza + larghezza)*2;
-    int area = altezza * larghezza;
+    private double altezza;
+    private double larghezza;
 
-public Rettangolo(int altezza,int larghezza){
+public Rettangolo(double altezza,double larghezza){
     this.altezza = altezza;
     this.larghezza = larghezza;
 
 }
-public int perimetroRett (){
+public double perimetroRett (){
     return (altezza + larghezza)*2;
 }
-public int areaRett(){
+public double areaRett(){
     return altezza * larghezza;
 }
     public void stampaRettangolo(){
-      int perimetroR = perimetroRett();
-      int areaR = areaRett();
-      areaRett();
-        if(altezza == larghezza){
-            System.out.println("Stai calcolando il perimetro di un quadrato che è di :" + perimetroR + " e la sua area è di : " + areaR);
+     if(altezza == larghezza){
+            System.out.println("Stai calcolando il perimetro di un quadrato che è di :" + this.perimetroRett() + " e la sua area è di : " + this.areaRett());
         } else {
-            System.out.println("Il perimetro del rettangolo è : " + perimetroR + " e la sua area è di : " + areaR);
+            System.out.println("Il perimetro del rettangolo è : " + this.perimetroRett() + " e la sua area è di : " + this.areaRett());
         }
 
     }
-    public void stampaDueRettangoli(Rettangolo r1, Rettangolo r2){
-     int perimetroRett1 = r1.perimetroRett();
-     int areaRett1 = r1.areaRett();
+    public void stampaDueRettangoli(Rettangolo r){
+     double perimetroRett1 = this.perimetroRett();
+     double areaRett1 = this.areaRett();
 
+     double perimetroRett2 = r.perimetroRett();
+     double areaRett2 = r.areaRett();
 
-     int perimetroRett2 = r2.perimetroRett();
-     int areaRett2 = r2.areaRett();
-
-
-      int sommaAreaRett = areaRett1 + areaRett2;
-      int sommaPerimetriRett = perimetroRett1 + perimetroRett2;
+      double sommaAreaRett = areaRett1 + areaRett2;
+      double sommaPerimetriRett = perimetroRett1 + perimetroRett2;
         System.out.println("La somma delle due aree è di : " + sommaAreaRett + " e la somma dei loro perimetri è di : " + sommaPerimetriRett);
-
     }
 }

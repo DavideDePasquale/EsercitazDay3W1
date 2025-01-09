@@ -19,7 +19,7 @@ public class Sim {
         System.out.println(" Credito residuo : " + credito);
         System.out.println(" Ultime Chiamate :");
         for(int i = 0; i < 5; i++){
-            if(ultime5chiamate[i] != null){
+            if(ultime5chiamate[i] == null){
                 System.out.println(ultime5chiamate[i].getNumeroChiamata() + " Minuti trascorsi di chiamata : " + ultime5chiamate[i].getDurataChiamata());
             } else {
                 System.out.println(" Nessuna chiamata!");
